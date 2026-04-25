@@ -5,31 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claudine Handali</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 /* ─────────────────────────────────────────
    TOKENS
 ───────────────────────────────────────── */
 :root {
-  --white:   #FDFCFB;
-  --cream:   #F5F0E8;
-  --paper:   #EDE7DB;
-  --ink:     #1C1917;
-  --ink2:    #44403C;
-  --muted:   #78716C;
-  --border:  #D6CFC4;
-  --yellow:  #FDE68A;
-  --yellow2: #FCD34D;
+  --white:   #F7F9FD;
+  --cream:   #EBF1FB;
+  --paper:   #DCE8F7;
+  --ink:     #0D1B2E;
+  --ink2:    #1E3A5F;
+  --muted:   #5577A0;
+  --border:  #B4CCDF;
+  --yellow:  #DBEAFE;
+  --yellow2: #2563EB;
   --blue:    #DBEAFE;
-  --blue2:   #93C5FD;
-  --green:   #D1FAE5;
-  --green2:  #6EE7B7;
-  --pink:    #FCE7F3;
-  --coral:   #FB7185;
+  --blue2:   #60A5FA;
+  --green:   #E0F2FE;
+  --green2:  #38BDF8;
+  --pink:    #EFF6FF;
+  --coral:   #3B82F6;
 
-  --sans:    'Plus Jakarta Sans', system-ui, sans-serif;
-  --serif:   'Lora', Georgia, serif;
-  --hand:    'Caveat', cursive;
+  --sans:    'Instrument Sans', system-ui, sans-serif;
+  --serif:   'Fraunces', Georgia, serif;
+  --hand:    'DM Mono', monospace;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -59,7 +59,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(253, 252, 251, 0.9);
+  background: rgba(247, 249, 253, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1.5px solid var(--border);
 }
@@ -138,7 +138,7 @@ nav {
   font-style: italic;
   font-size: clamp(160px, 28vw, 380px);
   font-weight: 600;
-  color: rgba(28,25,23,0.04);
+  color: rgba(13,27,46,0.05);
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -299,7 +299,7 @@ h1.hero-title em {
   align-items: center;
   gap: 0.4rem;
   background: var(--green);
-  color: #065F46;
+  color: #1D4ED8;
   font-size: 0.72rem;
   font-weight: 600;
   padding: 0.3rem 0.7rem;
@@ -512,7 +512,7 @@ h1.hero-title em {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background: var(--blue);
-  color: #1E40AF;
+  color: #1D4ED8;
   padding: 0.15rem 0.55rem;
   border-radius: 4px;
   margin-bottom: 0.6rem;
@@ -959,7 +959,7 @@ footer {
       </h1>
 
       <p class="hero-desc">
-        Currently a senior at UC San Diego finishing my B.S. in Data Science (June 2026). I build ML systems, data pipelines, and <a href="#work">the occasional AI agent that cold-calls people</a>. I care a lot about the story behind the numbers.
+        Senior at UC San Diego, B.S. Data Science, graduating June 2026. I build ML systems, data pipelines, and the occasional AI agent that got a little too autonomous.
       </p>
 
       <div class="hero-btns">
@@ -967,20 +967,7 @@ footer {
         <a href="#contact" class="btn-ghost">Say hello →</a>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Internships</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">7+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">9TB</div>
-          <div class="stat-label">Data Wrangled</div>
-        </div>
-      </div>
+
     </div>
 
     <div>
@@ -1056,8 +1043,8 @@ footer {
           <span class="exp-dates">Jun – Oct 2025</span>
         </div>
         <div class="exp-body">
-          <p>Got handed <strong>9TB of Intel telemetry data</strong> and asked to figure out how U.S. computers actually consume electricity — which sounds straightforward until you're deep in partitioned Parquet files at midnight wondering where Thursday went. Built DuckDB pipelines and statistical models to profile CPU power-state behavior across different workloads.</p>
-          <p>The analysis fed into a technical brief that genuinely shaped the team's research direction, which was a nice reminder that good infrastructure work matters even when no one sees it.</p>
+          <p>Inherited a large Intel telemetry dataset and built DuckDB pipelines and statistical models to profile CPU power-state behavior across workloads. The data was partitioned Parquet files with no documentation. It took a while.</p>
+          <p>The analysis fed directly into the team's research direction — which turned out to be a good reminder that infrastructure work has real downstream consequences even when it's invisible.</p>
           <span class="aside-note">→ first time I really understood why data engineering comes before data science</span>
         </div>
         <div class="tags"><span>DuckDB</span><span>Parquet</span><span>Python</span><span>Statistical Modeling</span><span>Time Series</span></div>
@@ -1073,8 +1060,8 @@ footer {
           <span class="exp-dates">Mar – Jul 2025</span>
         </div>
         <div class="exp-body">
-          <p>Built an AI agent that autonomously cold-calls leads — yes, actually calls them. <strong>GPT-4 + Twilio + n8n + Supabase</strong>, end to end. It was equal parts exciting and humbling to get it production-ready.</p>
-          <p>Also rebuilt data enrichment pipelines that had been quietly causing the CRM to be <strong>50% less useful</strong> than it should've been, and shipped predictive outreach algorithms that lifted conversion rates by 40%. This was the internship where I stopped thinking in prototypes and started thinking in systems.</p>
+          <p>Built an AI agent that autonomously calls leads — <strong>GPT-4 + Twilio + n8n + Supabase</strong>, end to end. Getting it to production required a lot of edge-case handling that the architecture docs did not prepare me for.</p>
+          <p>Also rebuilt data enrichment pipelines that had been quietly undermining the CRM, and shipped predictive outreach algorithms that meaningfully lifted conversion rates. Started thinking less in prototypes and more in systems.</p>
         </div>
         <div class="tags"><span>Python</span><span>GPT-4</span><span>Twilio</span><span>n8n</span><span>Supabase</span><span>CRM</span></div>
       </div>
@@ -1089,8 +1076,8 @@ footer {
           <span class="exp-dates">Jun – Sep 2024</span>
         </div>
         <div class="exp-body">
-          <p>The first real job. Worked on SQL dashboards, downtime analysis, and fixing data quality issues across banking systems — the kind of work that's never glamorous but matters enormously when you're dealing with financial infrastructure. Improved <strong>database accuracy by 20%</strong>.</p>
-          <p>Came away with a genuine appreciation for clean data and boring reliability. Banks have a way of teaching you that.</p>
+          <p>First internship. Built SQL dashboards, ran downtime analysis, and fixed data quality issues across banking systems.</p>
+          <p>Financial infrastructure has a low tolerance for sloppiness. Came away with a real appreciation for clean data and boring reliability.</p>
         </div>
         <div class="tags"><span>SQL</span><span>Data Engineering</span><span>Dashboards</span><span>MySQL</span></div>
       </div>
@@ -1120,7 +1107,7 @@ footer {
           <div class="tags" style="margin-bottom: 0.75rem;"><span>D3.js</span><span>Interactive Viz</span><span>Climate Data</span><span>EDA</span></div>
         </div>
         <div class="proj-card-right">
-          <p>Built with D3.js for a data viz course — compares U.S. precipitation patterns under low vs. high-emissions scenarios. Linked views, user-driven filtering, dynamic scales. The hardest part wasn't the chart math, it was making interactions feel <strong>snappy and intuitive</strong> rather than laggy and confusing. Really proud of how this one came together.</p>
+          <p>Built with D3.js for a data viz course — compares U.S. precipitation patterns under low vs. high-emissions scenarios. Linked views, user-driven filtering, dynamic scales. The hardest part was making interactions feel responsive rather than laggy.</p>
           <a href="https://jeremyjcheng.github.io/106_final_project/" target="_blank" class="proj-link">Open project ↗</a>
         </div>
       </article>
@@ -1128,7 +1115,7 @@ footer {
       <article class="proj-card c-yellow">
         <div class="proj-num">02</div>
         <h3>Power Outages Analysis</h3>
-        <p>Full pipeline on U.S. outage data — data cleaning, EDA, hypothesis testing, regression. The cleaning took <strong>way longer than the modeling</strong>, which I now realize is always the case. Solid intro to doing end-to-end data science properly.</p>
+        <p>Full pipeline on U.S. outage data — cleaning, EDA, hypothesis testing, regression. Most of the time went to cleaning, which is always the case and still always surprises me. Solid end-to-end project.</p>
         <div class="tags"><span>Python</span><span>Regression</span><span>Hypothesis Testing</span></div>
         <a href="https://claudinehandali.github.io/power-outages-project/" target="_blank" class="proj-link">View project ↗</a>
       </article>
@@ -1136,7 +1123,7 @@ footer {
       <article class="proj-card c-green">
         <div class="proj-num">03</div>
         <h3>Predicting Recipe Popularity</h3>
-        <p>Trained a regression model on 1.1 million Food.com ratings. Main finding: people slightly prefer <strong>shorter cook times and more ingredients</strong>. Which honestly tracks. Also my first proper dive into hyperparameter tuning.</p>
+        <p>Trained a regression model on Food.com ratings. Main finding: people prefer shorter cook times and more ingredients. Also my first real dive into hyperparameter tuning.</p>
         <div class="tags"><span>Feature Engineering</span><span>Regression</span><span>Tuning</span></div>
         <a href="https://docs.google.com/presentation/d/1RvzY_dxQLF1yQY_7wsBKlXczcp9Jqfaomqy4LRVNJb4/edit" target="_blank" class="proj-link">Slides ↗</a>
       </article>
@@ -1144,7 +1131,7 @@ footer {
       <article class="proj-card c-coral">
         <div class="proj-num">04 — humbling one</div>
         <h3>Image Processing from Scratch</h3>
-        <p>Convolution-based feature extraction + KNN classifier with <strong>literally zero libraries</strong>. Just Python, math, and stubbornness. The assignment that made me genuinely grateful for NumPy. Would not skip it though.</p>
+        <p>Convolution-based feature extraction + KNN classifier built from scratch — no libraries, just Python and math. The assignment that made me understand what NumPy is actually doing under the hood.</p>
         <div class="tags"><span>Computer Vision</span><span>Signal Processing</span><span>KNN</span></div>
         <a href="https://ClaudineHandali.github.io/imageprocessing" target="_blank" class="proj-link">View project ↗</a>
       </article>
@@ -1182,25 +1169,26 @@ footer {
 <section id="about">
   <div class="section">
     <p class="section-label">a bit about me</p>
-    <h2 class="section-title">Hey, I'm Claudine <em>:)</em></h2>
+    <h2 class="section-title">Hey, I'm Claudine.</h2>
 
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a senior at UC San Diego studying Data Science, graduating June 2026. I grew up being the kind of person who wanted to know <strong>why</strong> things happened — data science turned out to be a pretty good fit for that.</p>
+        <p>I'm a senior at UC San Diego studying Data Science, graduating June 2026. I grew up wanting to know <strong>why</strong> things happened — data science turned out to be a good fit for that.</p>
 
-        <p>My sweet spot is the messy middle of a project: where the data is complicated, the requirements aren't fully defined yet, and you have to figure out what "done" even means. I've worked in research (9TB of telemetry data, no pressure), AI automation (yes I built a bot that calls people), and banking infrastructure (SQL all day, every day).</p>
+        <p>I've worked in research, AI automation, and banking infrastructure. The common thread has been figuring out what "done" means when the requirements aren't fully defined and the data is messier than expected.</p>
 
         <div class="about-quote">
-          <p>"I care about writing code that the next person can actually read — because I've been the next person, and it's not fun when they didn't."</p>
+          <p>"I care about writing code that the next person can actually read — I've been the next person enough times to know it matters."</p>
         </div>
 
-        <p>Outside of data stuff: I play competitive tennis and take it maybe 20% too seriously, snowboard whenever there's a mountain within reach, and photograph my Samoyed Kaiyo way more than any reasonable person should.</p>
+        <p>Outside of data: I play competitive tennis, snowboard when there's a mountain nearby, and photograph my Samoyed Kaiyo more than I should.</p>
 
         <div class="hobbies-row">
-          <span class="hobby-chip"><span class="hobby-icon">🎾</span> Tennis</span>
-          <span class="hobby-chip"><span class="hobby-icon">🏔️</span> Snowboarding</span>
-          <span class="hobby-chip"><span class="hobby-icon">🐕</span> Kaiyo</span>
-          <span class="hobby-chip"><span class="hobby-icon">📊</span> Data (obviously)</span>
+          <span class="hobby-chip">Tennis</span>
+          <span class="hobby-chip">Snowboarding</span>
+          <span class="hobby-chip">Dogs</span>
+          <span class="hobby-chip">Dancing</span>
+          <span class="hobby-chip">Data </span>
         </div>
       </div>
 
@@ -1251,7 +1239,7 @@ footer {
       <em>or just say hi?</em>
     </h2>
     <p class="contact-note">
-      I'm looking for full-time roles in data science, ML engineering, or AI development starting summer/fall 2026. If something here caught your eye — or you just want to talk about data, tennis, or Samoyeds — genuinely, reach out.
+      Looking for full-time roles in data science, ML engineering, or AI development starting summer/fall 2026. If something here caught your attention — or you want to talk data, tennis, or Samoyeds — reach out.
     </p>
     <a href="mailto:claudinehandali@gmail.com" class="contact-email">
       claudinehandali@gmail.com ↗
