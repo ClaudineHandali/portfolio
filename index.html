@@ -79,7 +79,7 @@ nav {
 }
 
 .nav-links a {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--muted);
   letter-spacing: 0.01em;
@@ -206,7 +206,7 @@ h1.hero-title em {
 }
 
 .hero-desc {
-  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  font-size: clamp(1.06rem, 1.4vw, 1.19rem);
   line-height: 1.75;
   color: var(--ink2);
   max-width: 520px;
@@ -379,7 +379,7 @@ h1.hero-title em {
 .section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem);
+  padding: clamp(3.5rem, 5.5vw, 6rem) clamp(1.25rem, 5vw, 4rem);
 }
 
 .section-label {
@@ -396,13 +396,20 @@ h1.hero-title em {
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--ink);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-title em {
   font-style: italic;
   font-weight: 400;
   color: var(--muted);
+}
+
+.section-hint {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 /* tag chips */
@@ -616,7 +623,7 @@ h1.hero-title em {
 }
 
 .proj-card p {
-  font-size: 0.84rem;
+  font-size: clamp(1.06rem, 1.3vw, 1.19rem);
   line-height: 1.7;
   color: var(--ink2);
   flex: 1;
@@ -664,7 +671,7 @@ h1.hero-title em {
 }
 
 .about-text p {
-  font-size: 0.92rem;
+  font-size: clamp(1.06rem, 1.3vw, 1.19rem);
   line-height: 1.8;
   color: var(--ink2);
   margin-bottom: 1rem;
@@ -920,10 +927,475 @@ footer {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* ─────────────────────────────────────────
+   MOBILE REFINEMENT (390–430px)
+───────────────────────────────────────── */
+@media (max-width: 430px) {
+  /* Hero: tighter padding, responsive title */
+  .hero-inner {
+    padding: clamp(2.5rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+    gap: 2rem;
+  }
+
+  h1.hero-title {
+    font-size: clamp(1.75rem, 5vw, 5.2rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-desc {
+    font-size: clamp(0.9rem, 1.2vw, 1.08rem);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Hero buttons: full-width stack */
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-solid, .btn-ghost {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Experience: better mobile accordion layout */
+  .exp-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .exp-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .exp-selector-item {
+    padding: 1rem;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    text-align: left;
+  }
+
+  .exp-selector-item:last-child {
+    border-bottom: none;
+  }
+
+  .exp-selector-item:hover,
+  .exp-selector-item.active {
+    background: var(--cream);
+    border-left: none;
+  }
+
+  .exp-selector-num {
+    font-size: 1rem;
+  }
+
+  .exp-selector-title {
+    font-size: 1rem;
+  }
+
+  .exp-selector-org {
+    font-size: 1rem;
+  }
+
+  .exp-header-display h3 {
+    font-size: 1.25rem;
+  }
+
+  .exp-story-content p {
+    font-size: 1.06rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Observations: tighter layout */
+  .obs-trigger {
+    padding: 1rem 0.75rem;
+  }
+
+  .obs-content p {
+    padding: 0 0.75rem 1rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  /* Section spacing: reduce gaps */
+  section {
+    padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Projects: better mobile card layout */
+  .proj-card {
+    padding: 1rem;
+  }
+
+  .proj-num {
+    font-size: 0.75rem;
+  }
+
+  .proj-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .proj-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tags span {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* Skills: responsive layout */
+  .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .skill-pills span {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  /* About grid: single column */
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* Contact section */
+  .contact-heading {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .contact-email {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .contact-links a {
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.85rem;
+  }
+
+  /* Scroll-to-top button: larger tap target */
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
 ::selection { background: var(--yellow2); color: var(--ink); }
 :focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+/* ─────────────────────────────────────────
+   EXPERIENCE SELECTOR (HYBRID INTERACTIVE)
+───────────────────────────────────────── */
+.exp-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+}
+
+.exp-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exp-selector-item.active {
+  border-left-color: var(--coral);
+  background: var(--cream);
+}
+
+.exp-selector-item.active::after {
+  content: '→';
+  position: absolute;
+  right: 1rem;
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.exp-selector-item {
+  padding: 1rem;
+  border-left: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  position: relative;
+}
+
+.exp-selector-num {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.exp-selector-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.exp-selector-org {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.exp-display {
+  position: relative;
+}
+
+.exp-story {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.2s ease;
+}
+
+.exp-story.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.exp-header-display {
+  margin-bottom: 1.5rem;
+}
+
+.exp-header-display h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-org {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.exp-dates {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.exp-story-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: clamp(1.06rem, 1.3vw, 1.19rem);
+}
+
+.exp-story-content p:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-tags span {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+/* ─────────────────────────────────────────
+   EXPANDABLE OBSERVATIONS
+───────────────────────────────────────── */
+.observations {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 700px;
+}
+
+.obs-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.obs-item:last-child {
+  border-bottom: none;
+}
+
+.obs-trigger {
+  width: 100%;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.obs-trigger:hover {
+  background: var(--cream);
+}
+
+.obs-num {
+  min-width: 2rem;
+  font-weight: 700;
+  color: var(--coral);
+  font-size: 1rem;
+}
+
+.obs-title {
+  font-weight: 600;
+  color: var(--ink);
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.obs-toggle {
+  min-width: 1.75rem;
+  color: var(--coral);
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.obs-item.obs-active .obs-toggle {
+  transform: rotate(45deg);
+  color: var(--coral);
+}
+
+.obs-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--cream);
+}
+
+.obs-item.obs-active .obs-content {
+  max-height: 500px;
+}
+
+.obs-content p {
+  padding: 0 1.5rem 1.5rem calc(2rem + 1rem);
+  line-height: 1.7;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────────
+   PERSONAL INTERESTS
+───────────────────────────────────────── */
+.personal-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.interest {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+/* ─────────────────────────────────────────
+   MOBILE EXPERIENCE & OBSERVATIONS
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .exp-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .exp-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .exp-selector-item {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--border);
+  }
+
+  .obs-trigger {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .obs-toggle {
+    display: none;
+  }
+
+  .obs-content p {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+
 </style>
 </head>
 <body>
@@ -950,16 +1422,15 @@ footer {
 
   <div class="hero-inner">
     <div>
-      <p class="hero-eyebrow">Data Science Student @ UCSD</p>
+      <p class="hero-eyebrow">Data Science · Analytics</p>
 
       <h1 class="hero-title">
-        Hi, I'm Claudine —<br>
-        I make <span class="hi-note">messy data</span><br>
-        <em>actually useful.</em>
+        I ask a lot of <span class="hi-note">questions.</span><br>
+        <em>It usually works out.</em>
       </h1>
 
       <p class="hero-desc">
-        Senior at UC San Diego, B.S. Data Science, graduating June 2026. I build ML systems, data pipelines, and the occasional AI agent that got a little too autonomous.
+        I'm a Data Science student and Insights Analyst at UC Office of the President, where I work with customer satisfaction data, build dashboards, and dig into what's actually happening behind the numbers. I've also worked on AI agents, research, banking systems, and data pipelines, so I've gotten to explore a few different sides of data. I'm currently looking for my next opportunity in data and analytics where I can keep learning, contribute to useful work, and work with people who care about doing things well.
       </p>
 
       <div class="hero-btns">
@@ -972,7 +1443,7 @@ footer {
 
     <div>
       <div class="hero-card">
-        <span class="hero-card-tag">Open to full-time roles</span>
+        <span class="hero-card-tag">Looking for my next move</span>
         <img
           src="assets/profile.png"
           alt="Claudine Handali"
@@ -980,9 +1451,9 @@ footer {
         />
         <div>
           <div class="hero-card-name">Claudine Handali</div>
-          <div class="hero-card-sub">Data Science · UCSD · San Diego, CA</div>
+          <div class="hero-card-sub">Data Science · California</div>
         </div>
-        <div class="scribble">graduating June 2026 ✦</div>
+        <div class="scribble">open to relocating ☀️</div>
       </div>
     </div>
   </div>
@@ -1030,58 +1501,122 @@ footer {
   <div class="section">
     <p class="section-label">where I've worked</p>
     <h2 class="section-title">Experience</h2>
+    <p class="section-hint">Choose an experience to read the story →</p>
 
-    <div class="exp-list">
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div>
-            <span class="exp-type research">Research</span>
-            <div class="exp-role">Student Researcher</div>
-            <div class="exp-company">UC San Diego</div>
-          </div>
-          <span class="exp-dates">Jun – Oct 2025</span>
+    <div class="exp-container">
+      <!-- Experience Selector -->
+      <div class="exp-selector">
+        <div class="exp-selector-item active" data-exp="ucop">
+          <div class="exp-selector-num">01</div>
+          <div class="exp-selector-title">Insights Analyst Intern</div>
+          <div class="exp-selector-org">UC Office of the President</div>
         </div>
-        <div class="exp-body">
-          <p>Inherited a large Intel telemetry dataset and built DuckDB pipelines and statistical models to profile CPU power-state behavior across workloads. The data was partitioned Parquet files with no documentation. It took a while.</p>
-          <p>The analysis fed directly into the team's research direction — which turned out to be a good reminder that infrastructure work has real downstream consequences even when it's invisible.</p>
-          <span class="aside-note">→ first time I really understood why data engineering comes before data science</span>
+        <div class="exp-selector-item" data-exp="ai-dev">
+          <div class="exp-selector-num">02</div>
+          <div class="exp-selector-title">AI Developer Intern</div>
+          <div class="exp-selector-org">Service Agent</div>
         </div>
-        <div class="tags"><span>DuckDB</span><span>Parquet</span><span>Python</span><span>Statistical Modeling</span><span>Time Series</span></div>
+        <div class="exp-selector-item" data-exp="energy">
+          <div class="exp-selector-num">03</div>
+          <div class="exp-selector-title">Lead Student Researcher</div>
+          <div class="exp-selector-org">UC San Diego Energy Center</div>
+        </div>
+        <div class="exp-selector-item" data-exp="intel">
+          <div class="exp-selector-num">04</div>
+          <div class="exp-selector-title">Student Researcher</div>
+          <div class="exp-selector-org">UC San Diego</div>
+        </div>
       </div>
 
-      <div class="exp-item">
-        <div class="exp-header">
-          <div>
-            <span class="exp-type">Internship</span>
-            <div class="exp-role">AI Developer Intern</div>
-            <div class="exp-company">Service Agent</div>
+      <!-- Experience Stories -->
+      <div class="exp-display">
+        
+        <!-- UCOP -->
+        <div class="exp-story active" data-exp="ucop">
+          <div class="exp-header-display">
+            <h3>Insights Analyst Intern</h3>
+            <p class="exp-org">UC Office of the President</p>
+            <p class="exp-dates">Jun 2026 – Present</p>
           </div>
-          <span class="exp-dates">Mar – Jul 2025</span>
-        </div>
-        <div class="exp-body">
-          <p>Built an AI agent that autonomously calls leads — <strong>GPT-4 + Twilio + n8n + Supabase</strong>, end to end. Getting it to production required a lot of edge-case handling that the architecture docs did not prepare me for.</p>
-          <p>Also rebuilt data enrichment pipelines that had been quietly undermining the CRM, and shipped predictive outreach algorithms that meaningfully lifted conversion rates. Started thinking less in prototypes and more in systems.</p>
-        </div>
-        <div class="tags"><span>Python</span><span>GPT-4</span><span>Twilio</span><span>n8n</span><span>Supabase</span><span>CRM</span></div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div>
-            <span class="exp-type">Internship</span>
-            <div class="exp-role">IT Intern</div>
-            <div class="exp-company">Bank Central Asia</div>
+          <div class="exp-story-content">
+            <p>I came in to analyze employee satisfaction surveys. I ended up questioning what the scores were actually telling us.</p>
+            <p>I noticed that a low rating didn't always mean an agent had done something wrong. Sometimes it was a policy they couldn't control. Sometimes it was routing — a customer would open a case with one agent, call back, get a different agent, and only the second agent would receive the survey.</p>
+            <p>So I started looking more closely at the survey questions and talking with supervisors about what they were seeing in the actual cases. The recommendations I made weren't just about changing the survey. They were also about how we interpret the scores in the first place.</p>
+            <p>Now I'm looking at whether different teams naturally receive different ratings because of the work they handle. If expedited teams consistently get higher ratings because customers are getting faster service, for example, then using the same satisfaction threshold to evaluate every team may not tell us much about individual performance.</p>
           </div>
-          <span class="exp-dates">Jun – Sep 2024</span>
+          <div class="exp-tags">
+            <span>Salesforce</span>
+            <span>Dashboard Design</span>
+            <span>Analytics</span>
+            <span>Root Cause Analysis</span>
+            <span>Data Interpretation</span>
+          </div>
         </div>
-        <div class="exp-body">
-          <p>First internship. Built SQL dashboards, ran downtime analysis, and fixed data quality issues across banking systems.</p>
-          <p>Financial infrastructure has a low tolerance for sloppiness. Came away with a real appreciation for clean data and boring reliability.</p>
-        </div>
-        <div class="tags"><span>SQL</span><span>Data Engineering</span><span>Dashboards</span><span>MySQL</span></div>
-      </div>
 
+        <!-- AI Developer -->
+        <div class="exp-story" data-exp="ai-dev">
+          <div class="exp-header-display">
+            <h3>AI Developer Intern</h3>
+            <p class="exp-org">Service Agent</p>
+            <p class="exp-dates">Mar – Jul 2025</p>
+          </div>
+          <div class="exp-story-content">
+            <p>I thought building an AI agent that calls people would mostly be about getting the model to work. It wasn't.</p>
+            <p>I built the system end-to-end using GPT-4, Twilio, n8n, and Supabase. During testing, I noticed something that wasn't obvious from the code: the AI kept talking over people. A short pause was enough for it to assume someone was finished, so conversations felt awkward and rushed.</p>
+            <p>I ended up engineering pause detection so the system would wait two seconds before responding. I also added checks to tell whether a real person had answered instead of another AI, and logic to end calls when someone picked up but didn't say anything.</p>
+            <p>Once those pieces were in place, the conversations felt much more natural. I also rebuilt the data pipelines feeding the CRM and worked on algorithms to improve the outreach strategy.</p>
+          </div>
+          <div class="exp-tags">
+            <span>Python</span>
+            <span>GPT-4</span>
+            <span>Twilio</span>
+            <span>n8n</span>
+            <span>Supabase</span>
+            <span>CRM</span>
+          </div>
+        </div>
+
+        <!-- Energy Center -->
+        <div class="exp-story" data-exp="energy">
+          <div class="exp-header-display">
+            <h3>Lead Student Researcher</h3>
+            <p class="exp-org">UC San Diego Energy Center</p>
+            <p class="exp-dates">Jan – Mar 2026</p>
+          </div>
+          <div class="exp-story-content">
+            <p>Led a small team building a dashboard that shows how EV adoption actually changes oil imports across different countries. Built the whole data pipeline from scratch — cleaning messy energy trade data, modeling adoption trends, making it interactive so people could actually explore it.</p>
+            <p>Faculty ended up using it for their research and teaching. That was the win — not that we built something cool, but that people actually wanted to use it.</p>
+          </div>
+          <div class="exp-tags">
+            <span>ETL</span>
+            <span>Pandas</span>
+            <span>Data Visualization</span>
+            <span>Team Leadership</span>
+            <span>Energy Analytics</span>
+          </div>
+        </div>
+
+        <!-- Intel Research -->
+        <div class="exp-story" data-exp="intel">
+          <div class="exp-header-display">
+            <h3>Student Researcher</h3>
+            <p class="exp-org">UC San Diego</p>
+            <p class="exp-dates">Jun – Oct 2025</p>
+          </div>
+          <div class="exp-story-content">
+            <p>Got handed a massive Intel dataset and had to figure out what it was actually saying. No docs, just Parquet files and assumptions. Built pipelines with DuckDB to profile how CPUs behaved under different conditions.</p>
+            <p>The analysis changed what the research team decided to focus on next.</p>
+          </div>
+          <div class="exp-tags">
+            <span>DuckDB</span>
+            <span>Parquet</span>
+            <span>Python</span>
+            <span>Statistical Modeling</span>
+            <span>Time Series</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -1092,9 +1627,10 @@ footer {
   <div class="section">
     <p class="section-label">things I've built</p>
     <h2 class="section-title">Projects</h2>
+    <p class="section-hint">Explore a project →</p>
 
     <p class="projects-intro">
-      A mix of coursework and personal projects, roughly 2024–2025. Some turned out better than expected, a couple humbled me. All of them taught me something.
+      A mix of coursework and personal projects, 2024–2025. Some turned out better than expected, a couple humbled me.
     </p>
 
     <div class="projects-grid">
@@ -1107,7 +1643,7 @@ footer {
           <div class="tags" style="margin-bottom: 0.75rem;"><span>D3.js</span><span>Interactive Viz</span><span>Climate Data</span><span>EDA</span></div>
         </div>
         <div class="proj-card-right">
-          <p>Built with D3.js for a data viz course — compares U.S. precipitation patterns under low vs. high-emissions scenarios. Linked views, user-driven filtering, dynamic scales. The hardest part was making interactions feel responsive rather than laggy.</p>
+          <p>Built with D3.js for a data viz course — compares U.S. precipitation patterns under low vs. high-emissions scenarios. Linked views, user-driven filtering, and dynamic scales.</p>
           <a href="https://jeremyjcheng.github.io/106_final_project/" target="_blank" class="proj-link">Open project ↗</a>
         </div>
       </article>
@@ -1115,7 +1651,7 @@ footer {
       <article class="proj-card c-yellow">
         <div class="proj-num">02</div>
         <h3>Power Outages Analysis</h3>
-        <p>Full pipeline on U.S. outage data — cleaning, EDA, hypothesis testing, regression. Most of the time went to cleaning, which is always the case and still always surprises me. Solid end-to-end project.</p>
+        <p>Full pipeline on U.S. outage data — cleaning, EDA, hypothesis testing, and regression. Most of the work went into data preparation, which is always the case but easy to underestimate.</p>
         <div class="tags"><span>Python</span><span>Regression</span><span>Hypothesis Testing</span></div>
         <a href="https://claudinehandali.github.io/power-outages-project/" target="_blank" class="proj-link">View project ↗</a>
       </article>
@@ -1123,7 +1659,7 @@ footer {
       <article class="proj-card c-green">
         <div class="proj-num">03</div>
         <h3>Predicting Recipe Popularity</h3>
-        <p>Trained a regression model on Food.com ratings. Main finding: people prefer shorter cook times and more ingredients. Also my first real dive into hyperparameter tuning.</p>
+        <p>Trained a regression model on Food.com ratings. The model found that shorter cook times and more ingredients were associated with higher ratings. Also my first real dive into hyperparameter tuning.</p>
         <div class="tags"><span>Feature Engineering</span><span>Regression</span><span>Tuning</span></div>
         <a href="https://docs.google.com/presentation/d/1RvzY_dxQLF1yQY_7wsBKlXczcp9Jqfaomqy4LRVNJb4/edit" target="_blank" class="proj-link">Slides ↗</a>
       </article>
@@ -1139,7 +1675,7 @@ footer {
       <article class="proj-card c-blue">
         <div class="proj-num">05</div>
         <h3>EV Adoption Forecasting</h3>
-        <p>Modeled EV adoption vs. charging infrastructure across U.S. states using multiple linear regression + LOOCV. The <strong>model diagnostics</strong> were more revealing than the predictions — a lesson about not just trusting your outputs.</p>
+        <p>Modeled EV adoption vs. charging infrastructure across U.S. states using multiple linear regression + LOOCV. Model diagnostics were more revealing than the predictions themselves.</p>
         <div class="tags"><span>Linear Regression</span><span>Cross-Validation</span><span>Forecasting</span></div>
         <a href="https://docs.google.com/document/d/1UxPMkmVvukJ4qGlLbIjutAhnIFossH_yBIfwNBKqzIo/edit" target="_blank" class="proj-link">View project ↗</a>
       </article>
@@ -1155,11 +1691,76 @@ footer {
       <article class="proj-card c-green">
         <div class="proj-num">07</div>
         <h3>Bike Watching Dashboard</h3>
-        <p>Interactive time series dashboard for city bike usage. Time-based filtering, clean layout. The challenge was keeping filtering fast when the dataset got big — learned a lot about <strong>efficient D3 updates</strong> here.</p>
+        <p>Interactive time series dashboard for city bike usage. Time-based filtering, clean layout. Efficient D3 updates were key to keeping interactions fast as the dataset got large.</p>
         <div class="tags"><span>D3.js</span><span>Time Series</span><span>Interactive</span></div>
         <a href="https://claudinehandali.github.io/bikewatching/" target="_blank" class="proj-link">View project ↗</a>
       </article>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- THINGS I DIDN'T EXPECT -->
+<section id="expectations">
+  <div class="section">
+    <h2 class="section-title">Things I Didn't Expect</h2>
+
+    <div class="observations">
+      <div class="obs-item obs-active" data-obs="0">
+        <button class="obs-trigger">
+          <span class="obs-num">01</span>
+          <span class="obs-title">I didn't expect to care this much about how things are measured.</span>
+          <span class="obs-toggle">+</span>
+        </button>
+        <div class="obs-content">
+          <p>Working with customer satisfaction data made me realize that sometimes the bigger question isn't whether a number is high or low. It's whether the number is actually measuring what we think it is.</p>
+        </div>
+      </div>
+
+      <div class="obs-item" data-obs="1">
+        <button class="obs-trigger">
+          <span class="obs-num">02</span>
+          <span class="obs-title">I thought I'd mostly be working with data.</span>
+          <span class="obs-toggle">+</span>
+        </button>
+        <div class="obs-content">
+          <p>Understanding satisfaction data meant talking to the people behind the cases. A score wasn't just a number — it was a story about policies, routing, handoffs, and things completely outside anyone's control.</p>
+        </div>
+      </div>
+
+      <div class="obs-item" data-obs="2">
+        <button class="obs-trigger">
+          <span class="obs-num">03</span>
+          <span class="obs-title">I thought the AI model would be the hardest part.</span>
+          <span class="obs-toggle">+</span>
+        </button>
+        <div class="obs-content">
+          <p>Building an AI calling agent taught me otherwise. Getting the model to work was one thing. Engineering when it should listen, wait, and speak was another. A two-second pause detection system ended up mattering more than the model itself.</p>
+        </div>
+      </div>
+
+      <div class="obs-item" data-obs="3">
+        <button class="obs-trigger">
+          <span class="obs-num">04</span>
+          <span class="obs-title">I thought cleaning data was the part you did before the interesting work.</span>
+          <span class="obs-toggle">+</span>
+        </button>
+        <div class="obs-content">
+          <p>Working with large datasets changed that. The cleaning is the interesting work more often than I expected.</p>
+        </div>
+      </div>
+
+      <div class="obs-item" data-obs="4">
+        <button class="obs-trigger">
+          <span class="obs-num">05</span>
+          <span class="obs-title">I didn't expect my projects to end up being so different.</span>
+          <span class="obs-toggle">+</span>
+        </button>
+        <div class="obs-content">
+          <p>Energy data, AI agents, climate visualization, computer vision, research infrastructure, customer analytics. None of it planned. I just kept following the problems I found interesting.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1173,22 +1774,15 @@ footer {
 
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a senior at UC San Diego studying Data Science, graduating June 2026. I grew up wanting to know <strong>why</strong> things happened — data science turned out to be a good fit for that.</p>
+        <p>I'm a Data Science student who likes figuring things out. I spend a lot of time thinking about how to ask better questions and how to know whether an answer actually means what it seems to mean.</p>
 
-        <p>I've worked in research, AI automation, and banking infrastructure. The common thread has been figuring out what "done" means when the requirements aren't fully defined and the data is messier than expected.</p>
+        <p>Outside of work, I play tennis, do Pilates, and snowboard when I can. I have a Samoyed named Kaiyo who gets more of my attention than is probably necessary. I care about writing code that the next person can actually read — I've been the next person enough times to know it matters.</p>
 
-        <div class="about-quote">
-          <p>"I care about writing code that the next person can actually read — I've been the next person enough times to know it matters."</p>
-        </div>
-
-        <p>Outside of data: I play competitive tennis, snowboard when there's a mountain nearby, and photograph my Samoyed Kaiyo more than I should.</p>
-
-        <div class="hobbies-row">
-          <span class="hobby-chip">Tennis</span>
-          <span class="hobby-chip">Snowboarding</span>
-          <span class="hobby-chip">Dogs</span>
-          <span class="hobby-chip">Dancing</span>
-          <span class="hobby-chip">Data </span>
+        <div class="personal-interests">
+          <span class="interest">Tennis</span>
+          <span class="interest">Pilates</span>
+          <span class="interest">Snowboarding</span>
+          <span class="interest">Dogs</span>
         </div>
       </div>
 
@@ -1197,30 +1791,23 @@ footer {
           <h4>What I work with</h4>
 
           <div class="skill-row">
-            <div class="skill-category">Languages & Tools</div>
+            <div class="skill-category">Programming</div>
             <div class="skill-pills">
-              <span>Python</span><span>JavaScript</span><span>SQL</span><span>React</span><span>D3.js</span><span>Node.js</span><span>Git</span>
+              <span>Python</span><span>SQL</span><span>JavaScript</span><span>HTML/CSS</span>
             </div>
           </div>
 
           <div class="skill-row">
-            <div class="skill-category">ML & AI</div>
+            <div class="skill-category">Analytics</div>
             <div class="skill-pills">
-              <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span><span>Feature Engineering</span>
+              <span>Excel</span><span>Tableau</span><span>Power BI</span><span>Salesforce</span><span>Data Modeling</span><span>ETL</span><span>KPI Reporting</span><span>Data Visualization</span>
             </div>
           </div>
 
           <div class="skill-row">
-            <div class="skill-category">Data & Infrastructure</div>
+            <div class="skill-category">Tools & Technologies</div>
             <div class="skill-pills">
-              <span>Pandas</span><span>NumPy</span><span>DuckDB</span><span>Plotly</span><span>AWS</span><span>Docker</span>
-            </div>
-          </div>
-
-          <div class="skill-row">
-            <div class="skill-category">Coursework highlights</div>
-            <div class="skill-pills">
-              <span>Recommender Systems</span><span>Scalable Analytics</span><span>Representation Learning</span><span>Data Ethics</span>
+              <span>Pandas</span><span>scikit-learn</span><span>XGBoost</span><span>PyTorch</span><span>DuckDB</span><span>D3.js</span><span>AWS</span><span>Git</span><span>n8n</span>
             </div>
           </div>
         </div>
@@ -1239,7 +1826,7 @@ footer {
       <em>or just say hi?</em>
     </h2>
     <p class="contact-note">
-      Looking for full-time roles in data science, ML engineering, or AI development starting summer/fall 2026. If something here caught your attention — or you want to talk data, tennis, or Samoyeds — reach out.
+      I'm currently looking for my next opportunity in data and analytics. If you're working on something interesting or just want to talk, I'd like to hear from you.
     </p>
     <a href="mailto:claudinehandali@gmail.com" class="contact-email">
       claudinehandali@gmail.com ↗
@@ -1251,15 +1838,59 @@ footer {
     </div>
   </div>
   <footer>
-    <span>© Claudine Handali 2025</span>
-    <span>Built by hand in San Diego ☀️</span>
+    <span>© 2026 Claudine Handali</span>
+    <span>Built with care ☀️</span>
   </footer>
 </section>
 
 <button class="scroll-top" aria-label="Back to top">↑</button>
 
 <script>
-  // Scroll reveal
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Experience Selector
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  document.querySelectorAll('.exp-selector-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const expType = item.dataset.exp;
+      
+      // Update active selector
+      document.querySelectorAll('.exp-selector-item').forEach(i => {
+        i.classList.remove('active');
+      });
+      item.classList.add('active');
+      
+      // Update active story
+      document.querySelectorAll('.exp-story').forEach(story => {
+        story.classList.remove('active');
+      });
+      document.querySelector(`.exp-story[data-exp="${expType}"]`).classList.add('active');
+    });
+  });
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Expandable Observations
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  document.querySelectorAll('.obs-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const obsItem = trigger.closest('.obs-item');
+      const wasActive = obsItem.classList.contains('obs-active');
+      
+      // Close all observations
+      document.querySelectorAll('.obs-item').forEach(item => {
+        item.classList.remove('obs-active');
+      });
+      
+      // Open clicked observation if it wasn't already open
+      if (!wasActive) {
+        obsItem.classList.add('obs-active');
+      }
+    });
+  });
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Scroll Reveal
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1269,22 +1900,29 @@ footer {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.exp-item, .proj-card').forEach((el, i) => {
+  document.querySelectorAll('.proj-card').forEach((el, i) => {
     el.style.transitionDelay = `${i * 0.07}s`;
     observer.observe(el);
   });
 
-  // Scroll top button
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Scroll Top Button
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   const scrollBtn = document.querySelector('.scroll-top');
   window.addEventListener('scroll', () => {
     scrollBtn.classList.toggle('show', window.scrollY > 500);
   });
   scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Mobile nav
-  document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('open');
-  });
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // Mobile Navigation
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  const hamburger = document.querySelector('.hamburger');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  }
 </script>
 </body>
 </html>
